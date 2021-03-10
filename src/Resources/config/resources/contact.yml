@@ -1,0 +1,11 @@
+sylius_resource:
+    resources:
+        fastntech_form.contact:
+            driver: doctrine/orm
+            classes:
+                model: FastnTech\FormPlugin\Entity\Contact
+                interface: FastnTech\FormPlugin\Entity\ContactInterface
+                form: FastnTech\FormPlugin\Form\Type\ContactType
+                repository: Sylius\Bundle\ResourceBundle\Doctrine\ORM\EntityRepository
+                controller: Sylius\Bundle\ResourceBundle\Controller\ResourceController
+                factory: Sylius\Component\Resource\Factory\Factory

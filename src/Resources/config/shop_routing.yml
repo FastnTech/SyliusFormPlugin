@@ -1,0 +1,13 @@
+fastntech_form_contact:
+    path: /m_contact
+    methods: [GET, POST]
+    defaults:
+        _controller: fastntech_form.controller.contact:createAction
+        _sylius:
+            template: "@FastnTechFormPlugin/Shop/Contact/show.html.twig"
+            form:
+                type: FastnTech\FormPlugin\Form\Type\ContactType
+                options:
+                    validation_groups: [fastntech_form_contact]
+            redirect:
+                route: fastntech_form_contact

@@ -1,0 +1,38 @@
+sylius_grid:
+    grids:
+        fastntech_form_contact_grid:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: "%fastntech_form.model.contact.class%"
+            sorting:
+                id: desc
+            fields:
+                id:
+                    type: string
+                    sortable: ~
+                fullName:
+                    type: string
+                    sortable: ~
+                    label: 'Ad Soyad'
+                email:
+                    type: string
+                    sortable: ~
+                    label: 'E-Posta'
+                createdAt:
+                    type: datetime
+                    sortable: ~
+                    label: 'Tarih'
+            filters:
+                fullName:
+                    type: string
+                    label: 'Ad Soyad'
+                email:
+                    type: string
+                    label: 'E-Posta'
+            actions:
+                item:
+                    delete:
+                        type: delete
+                    update:
+                        type: update

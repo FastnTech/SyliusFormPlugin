@@ -1,0 +1,14 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+    {{ form_row(form.fullName) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.message) }}
+    {% if form.recaptcha is defined %}
+        {{ form_row(form.recaptcha) }}
+    {% endif %}
+    <input type="submit" value="test">
+    {{ form_end(form, {'render_rest': true}) }}
+{% endblock %}

@@ -1,0 +1,11 @@
+parameters:
+services:
+    fastntech_form.form.type.contact:
+        class: FastnTech\FormPlugin\Form\Type\ContactType
+        tags:
+            - { name: form.type, alias: fastntech_form_contact }
+
+    fastntech_form.event_listener.admin.menu_builder:
+        class: FastnTech\FormPlugin\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.menu.admin.main, method: addAdminMenuItems }

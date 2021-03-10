@@ -1,0 +1,6 @@
+imports:
+    - { resource: "services_test.yaml" }
+
+parameters:
+    locale: tr_TR
+    fastntech_form.form.type.contact.validation_groups: ['fastntech_form_contact']

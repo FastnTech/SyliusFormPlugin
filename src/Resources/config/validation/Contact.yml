@@ -1,0 +1,26 @@
+FastnTech\FormPlugin\Entity\Contact:
+    properties:
+        fullName:
+            - Type:
+                type: string
+                groups: ['sylius','fastntech_form_contact']
+            - NotBlank:
+                groups: ['fastntech_form_contact']
+            - Length:
+                min: 5
+                max: 120
+                groups: ['fastntech_form_contact']
+        email:
+            - Email:
+                message: Lütfen geçerli bir email adresi giriniz.
+                groups: ['fastntech_form_contact']
+        message:
+            - Type:
+                type: string
+                groups: ['fastntech_form_contact']
+            - NotBlank:
+                groups: ['fastntech_form_contact']
+            - Length:
+                min: 100
+                max: 255
+                groups: ['fastntech_form_contact']

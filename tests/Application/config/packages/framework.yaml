@@ -1,0 +1,8 @@
+framework:
+    profiler: true
+    secret: '%env(APP_SECRET)%'
+    form: true
+    validation: { enabled: true }
+    csrf_protection: true
+    session:
+        handler_id: ~

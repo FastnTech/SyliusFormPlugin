@@ -1,0 +1,16 @@
+fastntech_form_admin_contact_index:
+    resource: |
+        alias: fastntech_form.contact
+        section: admin
+        templates: "@SyliusAdmin/Crud"
+        except: ['show']
+        redirect: update
+        grid: fastntech_form_contact_grid
+        permission: true
+        vars:
+            all:
+                header: Formlar
+                subheader: FastnTech Formlar
+            index:
+                icon: comment
+    type: sylius.resource

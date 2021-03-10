@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: FastnTech\FormPlugin
+        psr4_prefix: FastnTech\FormPlugin

@@ -75,7 +75,7 @@ class Contact implements ContactInterface
         $this->createdAt = $createdAt;
     }
 
-    public function getUpdatedAt(): ?datetime
+    public function getUpdatedAt()
     {
         return $this->updatedAt;
     }
